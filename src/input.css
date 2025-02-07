@@ -18,3 +18,11 @@
 .pill {
   @apply w-fit rounded-full bg-gray-400 px-2 text-sm text-white;
 }
+
+.swiper-pagination {
+  position: absolute;
+  right: 10px;
+  left: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
