@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./output.css">
+  <title>Menu</title>
+</head>
+
+<body>
+  <div class="container min-w-screen min-h-screen py-1 relative">
+    <section id="navbar">
+      <nav class="flex items-center justify-between  bg-yellow-800 fixed w-full z-50">
+        <!-- Logo -->
+        <img src="img/logo-3.png" alt="logo" class="w-25 cursor-pointer py-2 px-4">
+
+        <!-- Navigation Links (hidden on small screens by default) -->
+        <div class="top-0 left-0 w-full flex items-center justify-center duration-300">
+          <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row items-center gap-y-12 md:gap-8">
+            <li class="list-none block md:inline-block px-5 font-medium"><a href="index.html"
+                class="no-underline text-white">Home</a></li>
+            <li class="list-none block md:inline-block px-5 font-medium"><a href="menu.html"
+                class="no-underline text-white">Menu</a></li>
+            <li class="list-none block md:inline-block px-5 font-medium"><a href="#"
+                class="no-underline text-white">Gallery</a></li>
+            <li class="list-none block md:inline-block px-5 font-medium"><a href="#"
+                class="no-underline text-white">Bite
+                'n
+                Brew</a></li>
+            <li class="list-none block md:inline-block px-5 font-medium"><a href="#"
+                class="no-underline text-white">Contact
+                Us</a></li>
+          </ul>
+        </div>
+        <!-- Hamburger Menu Icon (for small screens) -->
+        <div class="md:hidden ml-auto text-xl sm:text-3xl cursor-pointer z-50">
+          <button onclick="toggleMenu()" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </section>
+
+    <section id="hero">
+      <div
+        class="flex items-center justify-center bg-[url('img/hero-image.png')] bg-center bg-cover min-h-[35vh] md:min-h-[75vh]">
+        <h3 class="text-soft-brown text-4xl md:text-6xl text-center font-extrabold tracking-[.20em]">OUR <br> <span
+            class="text-yellow-700 underline">MENU</span> </h3>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="grid md:grid-cols-3 grid-cols-1" id="menu-tab">
+        <div class="col-span-1 bg-[url('img/bg-image.svg')] bg-center bg-cover p-3">
+          <div class="tab flex justify-between text-yellow-800 text-xs font-medium gap-0">
+            <button class="tablinks px-3 py-2 flex-1 border border-yellow-800 hover:bg-yellow-700 hover:text-white "
+              onclick="openMenu(event, 'coffee', 'coffee-menu')">Coffee</button>
+            <button class="tablinks px-3 py-2 flex-1 border border-yellow-800 hover:bg-yellow-700 hover:text-white"
+              onclick="openMenu(event, 'non-coffee', 'non-coffee-menu')">Non-Coffee</button>
+            <button class="tablinks px-3 py-2 flex-1 border border-yellow-800 hover:bg-yellow-700 hover:text-white"
+              onclick="openMenu(event, 'main-course')">Main Course</button>
+            <button class="tablinks px-3 py-2 flex-1 border border-yellow-800 hover:bg-yellow-700 hover:text-white"
+              onclick="openMenu(event, 'snack')">Snack/Dessert</button>
+          </div>
+
+          <div id="coffee" class="tabcontent grid grid-cols-2 mt-4 gap-4 text-sm">
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/coffee-icon.png" alt="coffee-icon" class="w-8 ">
+                <span>Hot Espresso</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/coffee-icon.png" alt="coffee-icon" class="w-8">
+                <span>Caramel Coffee</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/coffee-icon.png" alt="coffee-icon" class="w-8">
+                <span>Cappuccino</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/coffee-icon.png" alt="coffee-icon" class="w-8">
+                <span>Hazelnut Latte</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/coffee-icon.png" alt="coffee-icon" class="w-8">
+                <span>Coffee Latte</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/coffee-icon.png" alt="coffee-icon" class="w-8">
+                <span>Mochaccino</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="non-coffee" class="tabcontent grid grid-cols-2 mt-4 gap-4 text-sm">
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/non-coffee-icon.png" alt="coffee-icon" class="w-8 ">
+                <span>Mineral Water</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/non-coffee-icon.png" alt="coffee-icon" class="w-8 ">
+                <span>Infused Water</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/non-coffee-icon.png" alt="coffee-icon" class="w-8 ">
+                <span>Lemon Tea</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/non-coffee-icon.png" alt="coffee-icon" class="w-8 ">
+                <span>Peach Tea</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/non-coffee-icon.png" alt="coffee-icon" class="w-8 ">
+                <span>Matcha Latte</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/non-coffee-icon.png" alt="coffee-icon" class="w-8 ">
+                <span>Red Velvet Latte</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="snack" class="tabcontent grid grid-cols-2 mt-4 gap-4 text-sm">
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/snack-icon.png" alt="coffee-icon" class="w-8 ">
+                <span>French Fries</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/snack-icon.png" alt="coffee-icon" class="w-8 ">
+                <span>Butter Croissant</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/snack-icon.png" alt="coffee-icon" class="w-8 ">
+                <span>Tiramisu Cake</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/snack-icon.png" alt="coffee-icon" class="w-8 ">
+                <span>Croffle</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/snack-icon.png" alt="coffee-icon" class="w-8 ">
+                <span>Churros</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/snack-icon.png" alt="coffee-icon" class="w-8 ">
+                <span>Blueberry Pancake</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="main-course" class="tabcontent grid grid-cols-2 mt-4 gap-4 text-sm">
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/main-course-icon.png" alt="main-course-icon" class="w-8">
+                <span>Tenderloin Steak</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/main-course-icon.png" alt="main-course-icon" class="w-8">
+                <span>Dori Steak</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/main-course-icon.png" alt="main-course-icon" class="w-8">
+                <span>Aglio E Olio</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/main-course-icon.png" alt="main-course-icon" class="w-8">
+                <span>Spaghetti Bolognese</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/main-course-icon.png" alt="main-course-icon" class="w-8">
+                <span>Meat Lover Pizza</span>
+              </div>
+            </div>
+            <div class="text-yellow-800 font-medium border-b-1 border-b-yellow-700 border-dotted p-4">
+              <div class="flex gap-2">
+                <img src="img/main-course-icon.png" alt="main-course-icon" class="w-8">
+                <span>American Favourite Pizza</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coffee Menu-->
+        <div class="col-span-2 grid md:grid-cols-2 grid-cols-1 gap-4 p-3 tabcontent" id="coffee-menu">
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/espresso.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Hot Espresso</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 19.000</span>
+              <span class="text-sm text-soft-brown mt-4">Pure Arabica coffee bean extract with no additives.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/caramel-coffee.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Caramel Coffee</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 29.000</span>
+              <span class="text-sm text-soft-brown mt-4">Latte with praline and caramel sauce, featuring a sweet
+                taste and aroma</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/cappuccino.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Cappuccino</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 24.000</span>
+              <span class="text-sm text-soft-brown mt-4">A blend of espresso, warm milk, and a thick layer of foam on
+                top, with no added sugar.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/hazelnut.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Hazelnut Latte</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 28.000</span>
+              <span class="text-sm text-soft-brown mt-4">Espresso combined with gluten-free oat milk and a nutty
+                sensation from hazelnut.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/cafe-latte.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Cafe Latte</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 23.000</span>
+              <span class="text-sm text-soft-brown mt-4">A blend of espresso with premium cow's milk and a touch of
+                foam, with no added sugar.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/mocha.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Mochaccino</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 28.000</span>
+              <span class="text-sm text-soft-brown mt-4">A blend of espresso, steamed milk, and rich chocolate, topped
+                with a light layer of foam.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Course Menu -->
+        <div class="col-span-2 grid md:grid-cols-2 grid-cols-1 gap-4 p-3 tabcontent" id="main-course-menu">
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/steak-1.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Tenderloin Steak</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 69.000</span>
+              <span class="text-sm text-soft-brown mt-4">Premium cut of beef, exceptionally tender with a mild, buttery
+                texture.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/steak-2.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Dori Steak</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 65.000</span>
+              <span class="text-sm text-soft-brown mt-4">Tender and flaky white fish steak, mild in flavor with a
+                buttery texture.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/aglio.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Aglio E Olio</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 44.000</span>
+              <span class="text-sm text-soft-brown mt-4">Classic Italian pasta dish with garlic, olive oil, chili
+                flakes, and parsley.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/bolognese.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Spaghetti Bolognese</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 48.000</span>
+              <span class="text-sm text-soft-brown mt-4">Italian pasta dish with a rich, slow-cooked meat and tomato
+                sauce.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/pizza-1.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Meat Lover Pizza</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 73.000</span>
+              <span class="text-sm text-soft-brown mt-4">Pizza loaded with assorted meats like pepperoni, sausage,
+                bacon, and ham.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/pizza-2.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">American Favourite Pizza</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 78.000</span>
+              <span class="text-sm text-soft-brown mt-4">Classic pizza topped with pepperoni, sausage, and
+                mushrooms.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Non Coffee Menu -->
+        <div class="col-span-2 grid md:grid-cols-2 grid-cols-1 gap-4 p-3 tabcontent" id="non-coffee-menu">
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/mineral-water.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Mineral Water</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 15.000</span>
+              <span class="text-sm text-soft-brown mt-4">Pure mineral water with essential minerals, offering a crisp
+                and refreshing taste.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/infused-water.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Infused Water</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 20.000</span>
+              <span class="text-sm text-soft-brown mt-4">Infused water with fresh fruits and herbs, offering a
+                refreshing taste and natural aroma.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/lemon-tea.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Lemon Tea</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 20.000</span>
+              <span class="text-sm text-soft-brown mt-4">Refreshing lemon tea with a perfect balance of citrusy zest and
+                aromatic tea flavor.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/peach-tea.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Peach Tea</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 20.000</span>
+              <span class="text-sm text-soft-brown mt-4">Fruity peach tea with a sweet, refreshing taste and a delicate
+                aroma.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/matcha-latte.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Matcha Latte</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 30.000</span>
+              <span class="text-sm text-soft-brown mt-4">Creamy matcha latte with a rich, earthy flavor and a hint of
+                sweetness.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/red-velvet-latte.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Red Velvet Latte</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 33.000</span>
+              <span class="text-sm text-soft-brown mt-4">Smooth red velvet latte with a rich cocoa flavor and a hint of
+                creaminess.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Snack and Dessert Menu-->
+        <div class="col-span-2 grid md:grid-cols-2 grid-cols-1 gap-4 p-3 tabcontent" id="snack-menu">
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/french-fries.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">French Fries</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 35.000</span>
+              <span class="text-sm text-soft-brown mt-4">Crispy golden potato fries, lightly salted and perfect for
+                snacking.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/croissant.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Butter Croissant</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 30.000</span>
+              <span class="text-sm text-soft-brown mt-4">Flaky, buttery pastry with a crisp exterior and soft, airy
+                layers inside.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/cake.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Tiramisu Cake</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 40.000</span>
+              <span class="text-sm text-soft-brown mt-4">Rich and creamy Italian dessert with layers of coffee-soaked
+                sponge, mascarpone cheese, and cocoa powder.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/croffle.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Croffle</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 28.000</span>
+              <span class="text-sm text-soft-brown mt-4">A delightful fusion of a croissant and a waffle, crispy on the
+                outside with buttery, flaky layers inside. </span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/churros.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Churros</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 28.000</span>
+              <span class="text-sm text-soft-brown mt-4">Crispy, golden fried dough coated in cinnamon sugar, served
+                with chocolate or caramel dipping sauce.</span>
+            </div>
+          </div>
+          <div class="flex gap-3 shadow-md p-2 rounded-xl">
+            <img src="img/pancake.jpg" class="w-40 rounded-xl" alt="">
+            <div class="flex flex-col">
+              <span class="text-xl font-bold text-yellow-800">Blueberry Pancake</span>
+              <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 37.000</span>
+              <span class="text-sm text-soft-brown mt-4">Fluffy pancakes filled with juicy blueberries, topped with syrup and a dusting of powdered sugar. </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="footer">
+      <footer class="mt-2">
+        <div class="w-full bg-yellow-800 text-white py-5">
+          <div class="px-10">
+            <!-- <h3 class="text-4xl text-center">VISIT US</h3> -->
+            <iframe class="w-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450931!2d144.95373531531692!3d-37.81627917975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce720!2sMelbourne%2C+Victoria%2C+Australia!5e0!3m2!1sen!2s!4v1636622977773!5m2!1sen!2s"
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="grid md:grid-cols-3 grid-cols-1 gap-6 px-10 mt-5">
+            <div class="flex flex-col font-light">
+              <img src="img/logo-3.png" alt="logo" class="w-35 py-2 px-4">
+              <span class="mt-14 text-sm">&copy; 2025 BITE 'N BREW CAFE AND RESTO, All Rights Reserved </span>
+            </div>
+            <div class="flex flex-col font-light">
+              <h2 class="text-xl font-medium">BITE N BREW CAFE AND RESTO</h2>
+              <span class="mt-3">11920 S Texas 6 # 600, Sugar Land,Houston TX 77498, United States
+                Phone: +18325321010
+                Email: admin@bitenbrew.com</span>
+            </div>
+            <div class="flex flex-col font-light">
+              <h2 class="text-xl font-medium">OPERATIONAL HOURS</h2>
+              <span class="mt-3">Monday - Thursday: 11:00AM - 11:00PM</span>
+              <span>Friday 11:00AM - 1:00PM</span>
+              <span>Saturday 10:00AM - 1:00PM</span>
+              <span>Sunday 10:00AM - 11:00PM</span>
+            </div>
+            <div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelector(".tablinks").click();
+    });
+    function openMenu(evt, menuName) {
+      var i, tabcontent, tablinks;
+
+      // Hide all tab content
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Hide the coffee-menu grid by default
+      var coffeeMenu = document.getElementById("coffee-menu");
+      var coffee = document.getElementById("coffee");
+      var mainCourseMenu = document.getElementById("main-course-menu");
+      var mainCourse = document.getElementById("main-course");
+      var nonCoffee = document.getElementById("non-coffee");
+      var nonCoffeeMenu = document.getElementById("non-coffee-menu");
+      var snack = document.getElementById("snack");
+      var snackMenu = document.getElementById("snack-menu");
+      if (coffeeMenu) {
+        coffeeMenu.style.display = "none";
+        coffee.style.display = "none";
+      } else if (mainCourseMenu) {
+        mainCourseMenu.style.display = "none";
+        mainCourse.style.display = "none";
+      } else if (nonCoffeeMenu) {
+        nonCoffeeMenu.style.display = "none";
+        nonCoffee.style.display = "none";
+      } else if (snackMenu) {
+        snackMenu.style.display = "none";
+        snack.style.display = "none";
+      }
+
+      // Remove active class from all buttons
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+      }
+
+      // Show the selected tab content
+      var selectedTab = document.getElementById(menuName);
+      if (selectedTab) {
+        selectedTab.style.display = "block";
+      }
+
+      // If the coffee tab is active, show the coffee-menu grid
+      if (menuName === 'coffee') {
+        if (coffeeMenu) {
+          coffeeMenu.style.display = "grid";
+          coffee.style.display = "grid";
+        }
+      } else if (menuName == 'main-course') {
+        if (mainCourseMenu) {
+          mainCourseMenu.style.display = "grid";
+          mainCourse.style.display = "grid";
+        }
+      } else if (menuName == 'non-coffee') {
+        if (nonCoffeeMenu) {
+          nonCoffeeMenu.style.display = "grid";
+          nonCoffee.style.display = "grid";
+        }
+      } else if (menuName == 'snack') {
+        if (snackMenu) {
+          snackMenu.style.display = "grid";
+          snack.style.display = "grid";
+        }
+      }
+
+      // Add active class to the clicked button
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+</body>
+
+</html>

@@ -2,7 +2,7 @@
 
 @theme {
   --color-abu-monyet: #4c585b;
-
+  --color-soft-brown: #dac298;
   --breakpoint-tablet: 768px;
 }
 
@@ -25,4 +25,26 @@
   left: auto;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.tab button {
+  float: left;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tablinks.active {
+  background-color: #b45309; 
+  color: white;
+}
+
+.tabcontent {
+  display: none;
+  border-top: none;
 }
