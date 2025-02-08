@@ -7,46 +7,46 @@
   <title>Bite n Brew</title>
   <link rel="stylesheet" href="./output.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
-    }
-  </script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="script.js" defer></script>
 </head>
 
 <body class="bg-[url('img/bg-image.svg')] bg-center bg-cover">
   <div class="container min-w-screen min-h-screen py-1 relative">
-    <nav class="flex items-center justify-between  bg-yellow-800 fixed w-full z-50">
-      <!-- Logo -->
-      <img src="img/logo-3.png" alt="logo" class="w-25 cursor-pointer py-2 px-4">
+    <section id="navbar">
+      <nav class="flex items-center justify-between  bg-yellow-800 fixed w-full z-50">
+        <!-- Logo -->
+        <img src="img/logo-3.png" alt="logo" class="w-25 cursor-pointer py-2 px-4">
 
-      <!-- Navigation Links (hidden on small screens by default) -->
-      <div class="top-0 left-0 w-full flex items-center justify-center duration-300">
-        <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row items-center gap-y-12 md:gap-8">
-          <li class="list-none block md:inline-block px-5 font-medium"><a href="#"
-              class="no-underline text-white">Home</a></li>
-          <li class="list-none block md:inline-block px-5 font-medium"><a href="#"
-              class="no-underline text-white">Menu</a></li>
-          <li class="list-none block md:inline-block px-5 font-medium"><a href="#"
-              class="no-underline text-white">Gallery</a></li>
-          <li class="list-none block md:inline-block px-5 font-medium"><a href="#" class="no-underline text-white">Bite
-              n
-              Brew</a></li>
-          <li class="list-none block md:inline-block px-5 font-medium"><a href="#"
-              class="no-underline text-white">Contact
-              Us</a></li>
-        </ul>
-      </div>
-      <!-- Hamburger Menu Icon (for small screens) -->
-      <div class="md:hidden ml-auto text-xl sm:text-3xl cursor-pointer z-50">
-        <button onclick="toggleMenu()" class="text-white focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-      </div>
-    </nav>
+        <!-- Navigation Links (hidden on small screens by default) -->
+        <div class="top-0 left-0 w-full flex items-center justify-center duration-300">
+          <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row items-center gap-y-12 md:gap-8">
+            <li class="list-none block md:inline-block px-5 font-medium"><a href="#"
+                class="no-underline text-white">Home</a></li>
+            <li class="list-none block md:inline-block px-5 font-medium"><a href="menu.html"
+                class="no-underline text-white">Menu</a></li>
+            <li class="list-none block md:inline-block px-5 font-medium"><a href="#"
+                class="no-underline text-white">Gallery</a></li>
+            <li class="list-none block md:inline-block px-5 font-medium"><a href="#"
+                class="no-underline text-white">Bite
+                n
+                Brew</a></li>
+            <li class="list-none block md:inline-block px-5 font-medium"><a href="#"
+                class="no-underline text-white">Contact
+                Us</a></li>
+          </ul>
+        </div>
+        <!-- Hamburger Menu Icon (for small screens) -->
+        <div class="md:hidden ml-auto text-xl sm:text-3xl cursor-pointer z-50">
+          <button onclick="toggleMenu()" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </section>
 
     <div class="text-white mt-40 max-w-lg px-15">
       <h1 class="text-5xl font-semibold leading-normal">Savor Every <span class="text-yellow-800">Bite</span>, <br> Sip
@@ -70,115 +70,103 @@
   </div>
 
   <!-- Carousel section for review -->
-  <div class="w-full relative">
-    <div class="swiper vertical-slide-carousel swiper-container relative h-fit ">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div
-            class="md:h-96 flex justify-center items-center p-10 md:p-20 bg-[url('img/carousel-1.png')] bg-center bg-cover relative text-center">
-            <div class="border-2 border-white relative z-10 sm:px-15 md:px-25 py-10">
-              <h1 class="text-4xl text-white font-bold">Customer Review</h1>
-              <p class="text-white font-light mt-5 md:mt-10 line-clamp-4">"Hidden away in a quiet corner of the city,
-                this café is a
-                gem for
-                coffee lovers. The moment you step inside, the aroma of freshly brewed espresso welcomes you. The
-                interior is warm and rustic, with wooden tables, soft lighting, and plenty of greenery—perfect for a
-                relaxed afternoon. I ordered their signature pour-over, and it was smooth, aromatic, and perfectly
-                balanced. Their pastries, especially the croissants, were flaky and buttery. "</p>
-              <p class="text-white font-light mt-5 md:mt-10">-John Doe from Instagram-</p>
+  <section id="customer-review">
+    <div class="w-full relative">
+      <div class="swiper vertical-slide-carousel swiper-container relative h-fit ">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="md:h-96 flex justify-center items-center p-10 md:p-20 bg-[url('img/carousel-1.png')] bg-center bg-cover relative text-center">
+              <div class="border-2 border-white relative z-10 sm:px-15 md:px-25 py-10">
+                <h1 class="text-4xl text-white font-bold">Customer Review</h1>
+                <p class="text-white font-light mt-5 md:mt-10 line-clamp-4">"Hidden away in a quiet corner of the city,
+                  this café is a
+                  gem for
+                  coffee lovers. The moment you step inside, the aroma of freshly brewed espresso welcomes you. The
+                  interior is warm and rustic, with wooden tables, soft lighting, and plenty of greenery—perfect for a
+                  relaxed afternoon. I ordered their signature pour-over, and it was smooth, aromatic, and perfectly
+                  balanced. Their pastries, especially the croissants, were flaky and buttery. "</p>
+                <p class="text-white font-light mt-5 md:mt-10">-John Doe from Instagram-</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="md:h-96 flex justify-center items-center p-10 md:p-20 bg-[url('img/carousel-2.png')] bg-center bg-cover relative backdrop-blur-sm text-center">
+              <div class="border-2 border-white relative z-10 sm:px-15 md:px-25 py-10">
+                <h1 class="text-4xl text-white font-bold">Customer Review</h1>
+                <p class="text-white font-light mt-5 md:mt-10 line-clamp-4">"This brunch spot is an Instagram dream! The
+                  décor is
+                  modern and chic, with pastel hues, rattan furniture, and plenty of natural light. I tried the avocado
+                  toast with poached eggs, and while it was delicious, the portion size felt a bit small for the price.
+                  The iced matcha latte was creamy and well-balanced, not too sweet. However, service was a bit slow,
+                  and
+                  we had to wait nearly 20 minutes before our order arrived, even though the café wasn’t too busy. "</p>
+                <p class="text-white font-light mt-5 md:mt-10">-Alice from Google Review-</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="md:h-96 flex justify-center items-center p-10 md:p-20 bg-[url('img/carousel-3.png')] bg-center bg-cover relative backdrop-blur-sm text-center">
+              <div class="border-2 border-white relative z-10 sm:px-15 md:px-25 py-10">
+                <h1 class="text-4xl text-white font-bold">Customer Review</h1>
+                <p class="text-white font-light mt-5 md:mt-10 line-clamp-4">"If you’re looking for authentic flavors
+                  without breaking the bank, this restaurant is a must-visit. The menu focuses on traditional Asian
+                  cuisine, and every dish is packed with rich, complex flavors. I ordered the beef pho, and the broth
+                  was
+                  incredibly flavorful, with just the right balance of spices. The noodles were cooked to perfection,
+                  and
+                  the beef slices were tender. The service was fast, and the staff was welcoming, giving great
+                  recommendations. The portion sizes were generous, and the prices were very reasonable. It’s not a
+                  fancy
+                  place, but if you care more about taste than aesthetics, this is the place to go!"</p>
+                <p class="text-white font-light mt-5 md:mt-10 ">-Jane from Trip Advisor-</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div
-            class="md:h-96 flex justify-center items-center p-10 md:p-20 bg-[url('img/carousel-2.png')] bg-center bg-cover relative backdrop-blur-sm text-center">
-            <div class="border-2 border-white relative z-10 sm:px-15 md:px-25 py-10">
-              <h1 class="text-4xl text-white font-bold">Customer Review</h1>
-              <p class="text-white font-light mt-5 md:mt-10 line-clamp-4">"This brunch spot is an Instagram dream! The
-                décor is
-                modern and chic, with pastel hues, rattan furniture, and plenty of natural light. I tried the avocado
-                toast with poached eggs, and while it was delicious, the portion size felt a bit small for the price.
-                The iced matcha latte was creamy and well-balanced, not too sweet. However, service was a bit slow, and
-                we had to wait nearly 20 minutes before our order arrived, even though the café wasn’t too busy. "</p>
-              <p class="text-white font-light mt-5 md:mt-10">-Alice from Google Review-</p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div
-            class="md:h-96 flex justify-center items-center p-10 md:p-20 bg-[url('img/carousel-3.png')] bg-center bg-cover relative backdrop-blur-sm text-center">
-            <div class="border-2 border-white relative z-10 sm:px-15 md:px-25 py-10">
-              <h1 class="text-4xl text-white font-bold">Customer Review</h1>
-              <p class="text-white font-light mt-5 md:mt-10 line-clamp-4">"If you’re looking for authentic flavors
-                without breaking the bank, this restaurant is a must-visit. The menu focuses on traditional Asian
-                cuisine, and every dish is packed with rich, complex flavors. I ordered the beef pho, and the broth was
-                incredibly flavorful, with just the right balance of spices. The noodles were cooked to perfection, and
-                the beef slices were tender. The service was fast, and the staff was welcoming, giving great
-                recommendations. The portion sizes were generous, and the prices were very reasonable. It’s not a fancy
-                place, but if you care more about taste than aesthetics, this is the place to go!"</p>
-              <p class="text-white font-light mt-5 md:mt-10 ">-Jane from Trip Advisor-</p>
-            </div>
-          </div>
-        </div>
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
       </div>
-      <!-- Pagination -->
-      <div class="swiper-pagination"></div>
     </div>
-  </div>
+  </section>
   <!-- end carousel section -->
 
-  <footer class="mt-2">
-    <div class="w-full bg-yellow-800 text-white py-5">
-      <div class="grid md:grid-cols-3 grid-cols-1 gap-6 px-10">
-        <div class="flex flex-col font-light">
-          <h2 class="text-xl font-medium">BITE N BREW CAFE AND RESTO</h2>
-          <span class="mt-3">11920 S Texas 6 # 600, Sugar Land,Houston TX 77498, United States
-            Phone: +18325321010
-            Email: admin@bitenbrew.com</span>
+  <section id="footer">
+    <footer class="mt-2">
+      <div class="w-full bg-yellow-800 text-white py-5">
+        <div class="px-10">
+          <!-- <h3 class="text-4xl text-center">VISIT US</h3> -->
+          <iframe class="w-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450931!2d144.95373531531692!3d-37.81627917975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce720!2sMelbourne%2C+Victoria%2C+Australia!5e0!3m2!1sen!2s!4v1636622977773!5m2!1sen!2s"
+            loading="lazy">
+          </iframe>
         </div>
-        <div class="flex flex-col font-light">
-          <h2 class="text-xl font-medium">OPERATIONAL HOURS</h2>
-          <span class="mt-3">Monday - Thursday: 11:00AM - 11:00PM</span>
-          <span>Friday 11:00AM - 1:00PM</span>
-          <span>Saturday 10:00AM - 1:00PM</span>
-          <span>Sunday 10:00AM - 11:00PM</span>
-        </div>
-        <div>
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-6 px-10 mt-5">
+          <div class="flex flex-col font-light">
+            <img src="img/logo-3.png" alt="logo" class="w-35 py-2 px-4">
+            <span class="mt-14 text-sm">&copy; 2025 BITE 'N BREW CAFE AND RESTO, All Rights Reserved </span>
+          </div>
+          <div class="flex flex-col font-light">
+            <h2 class="text-xl font-medium">BITE N BREW CAFE AND RESTO</h2>
+            <span class="mt-3">11920 S Texas 6 # 600, Sugar Land,Houston TX 77498, United States
+              Phone: +18325321010
+              Email: admin@bitenbrew.com</span>
+          </div>
+          <div class="flex flex-col font-light">
+            <h2 class="text-xl font-medium">OPERATIONAL HOURS</h2>
+            <span class="mt-3">Monday - Thursday: 11:00AM - 11:00PM</span>
+            <span>Friday 11:00AM - 1:00PM</span>
+            <span>Saturday 10:00AM - 1:00PM</span>
+            <span>Sunday 10:00AM - 11:00PM</span>
+          </div>
+          <div>
+          </div>
         </div>
       </div>
-      <div class="mt-8 font-light">
-        <div class="flex justify-between px-10">
-          <span>&copy; Bite n Brew</span>
-          <span>&copy;Copyright
-            <script>document.write(new Date().getFullYear())</script>
-          </span>
-          <span>Enggar Rahayu Safitri</span>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.vertical-slide-carousel', {
-      direction: 'horizontal',
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
-    });
-  </script>
+    </footer>
+  </section>
 </body>
-
 
 </html>

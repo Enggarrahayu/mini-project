@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./output.css">
+  <script src="script.js" defer></script>
   <title>Menu</title>
 </head>
 
@@ -449,14 +450,15 @@
             <div class="flex flex-col">
               <span class="text-xl font-bold text-yellow-800">Blueberry Pancake</span>
               <span class="text-xl font-medium text-yellow-700 mt-2">Rp. 37.000</span>
-              <span class="text-sm text-soft-brown mt-4">Fluffy pancakes filled with juicy blueberries, topped with syrup and a dusting of powdered sugar. </span>
+              <span class="text-sm text-soft-brown mt-4">Fluffy pancakes filled with juicy blueberries, topped with
+                syrup and a dusting of powdered sugar. </span>
             </div>
           </div>
         </div>
       </div>
     </section>
     <section id="footer">
-      <footer class="mt-2">
+      <footer>
         <div class="w-full bg-yellow-800 text-white py-5">
           <div class="px-10">
             <!-- <h3 class="text-4xl text-center">VISIT US</h3> -->
@@ -490,81 +492,7 @@
       </footer>
     </section>
   </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelector(".tablinks").click();
-    });
-    function openMenu(evt, menuName) {
-      var i, tabcontent, tablinks;
 
-      // Hide all tab content
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-
-      // Hide the coffee-menu grid by default
-      var coffeeMenu = document.getElementById("coffee-menu");
-      var coffee = document.getElementById("coffee");
-      var mainCourseMenu = document.getElementById("main-course-menu");
-      var mainCourse = document.getElementById("main-course");
-      var nonCoffee = document.getElementById("non-coffee");
-      var nonCoffeeMenu = document.getElementById("non-coffee-menu");
-      var snack = document.getElementById("snack");
-      var snackMenu = document.getElementById("snack-menu");
-      if (coffeeMenu) {
-        coffeeMenu.style.display = "none";
-        coffee.style.display = "none";
-      } else if (mainCourseMenu) {
-        mainCourseMenu.style.display = "none";
-        mainCourse.style.display = "none";
-      } else if (nonCoffeeMenu) {
-        nonCoffeeMenu.style.display = "none";
-        nonCoffee.style.display = "none";
-      } else if (snackMenu) {
-        snackMenu.style.display = "none";
-        snack.style.display = "none";
-      }
-
-      // Remove active class from all buttons
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-      }
-
-      // Show the selected tab content
-      var selectedTab = document.getElementById(menuName);
-      if (selectedTab) {
-        selectedTab.style.display = "block";
-      }
-
-      // If the coffee tab is active, show the coffee-menu grid
-      if (menuName === 'coffee') {
-        if (coffeeMenu) {
-          coffeeMenu.style.display = "grid";
-          coffee.style.display = "grid";
-        }
-      } else if (menuName == 'main-course') {
-        if (mainCourseMenu) {
-          mainCourseMenu.style.display = "grid";
-          mainCourse.style.display = "grid";
-        }
-      } else if (menuName == 'non-coffee') {
-        if (nonCoffeeMenu) {
-          nonCoffeeMenu.style.display = "grid";
-          nonCoffee.style.display = "grid";
-        }
-      } else if (menuName == 'snack') {
-        if (snackMenu) {
-          snackMenu.style.display = "grid";
-          snack.style.display = "grid";
-        }
-      }
-
-      // Add active class to the clicked button
-      evt.currentTarget.classList.add("active");
-    }
-  </script>
 </body>
 
 </html>
