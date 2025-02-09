@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./output.css">
+  <script src="script.js" defer></script>
+  <title>Menu</title>
+</head>
+
+<body class="bg-[url('img/bg-image.svg')] bg-center bg-cover">
+  <div class="container relative min-h-screen py-1 min-w-screen">
+    <header id="navbar">
+      <nav class="fixed z-50 flex items-center justify-between w-full bg-yellow-800">
+        <!-- Logo -->
+        <img src="img/logo-3.png" alt="logo" class="px-4 py-2 cursor-pointer w-25">
+
+        <!-- Navigation Links (hidden on small screens by default) -->
+        <div class="top-0 left-0 flex items-center justify-center w-full duration-300">
+          <ul id="mobile-menu" class="flex-col items-center hidden md:flex md:flex-row gap-y-12 md:gap-8">
+            <li class="block px-5 font-medium list-none md:inline-block"><a href="index.html"
+                class="text-white no-underline">Home</a></li>
+            <li class="block px-5 font-medium list-none md:inline-block"><a href="menu.html"
+                class="text-white no-underline">Menu</a></li>
+            <li class="block px-5 font-medium list-none md:inline-block"><a href="#"
+                class="text-white no-underline">Gallery</a></li>
+            <li class="block px-5 font-medium list-none md:inline-block"><a href="#"
+                class="text-white no-underline">Bite
+                'n
+                Brew</a></li>
+            <li class="block px-5 font-medium list-none md:inline-block"><a href="contact-us.html"
+                class="text-white no-underline">Contact
+                Us</a></li>
+          </ul>
+        </div>
+        <!-- Hamburger Menu Icon (for small screens) -->
+        <div class="z-50 ml-auto text-xl cursor-pointer md:hidden sm:text-3xl">
+          <button onclick="toggleMenu()" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="content" class="mt-20">
+        <h2 class="text-2xl font-bold text-center text-yellow-800">Welcome to Our Café Gallery</h2>
+        <p class="mt-2 text-center text-white">Explore the flavors, ambiance, and moments that make Bite 'n Brew
+          special.</p>
+
+        <div class="grid grid-cols-2 gap-10 p-12 md:grid-cols-3 lg:grid-cols-4">
+          <div class="relative flex flex-col shadow-md">
+            <img src="img/vibe-1.jpg" alt="Cafe Vibe"
+              class="border-gray-200 border-l-[12px] border-r-[12px] border-t-[12px] border-b-[40px]">
+            <span
+              class="absolute bottom-0 left-0 w-full py-1.5 font-medium text-center text-yellow-700 bg-gray-200 underline">Outdoor
+              Space</span>
+          </div>
+
+          <div class="relative flex flex-col shadow-md">
+            <img src="img/exterior.jpg" alt="Cafe Vibe"
+              class="border-gray-200 border-l-[12px] border-r-[12px] border-t-[12px] border-b-[40px]">
+            <span
+              class="absolute bottom-0 left-0 w-full py-1.5 font-medium text-center text-yellow-700 bg-gray-200 underline">Customer
+              Experience</span>
+          </div>
+
+          <div class="relative flex flex-col shadow-md">
+            <img src="img/outdoor-space.jpg" alt="Cafe Vibe"
+              class="border-gray-200 border-l-[12px] border-r-[12px] border-t-[12px] border-b-[40px]">
+            <span
+              class="absolute bottom-0 left-0 w-full py-1.5 font-medium text-center text-yellow-700 bg-gray-200 underline">Outdoor
+              Space</span>
+          </div>
+
+          <div class="relative flex flex-col shadow-md">
+            <img src="img/customer-experience.jpg" alt="Cafe Vibe"
+              class="border-gray-200 border-l-[12px] border-r-[12px] border-t-[12px] border-b-[40px]">
+            <span
+              class="absolute bottom-0 left-0 w-full py-1.5 font-medium text-center text-yellow-700 bg-gray-200 underline">Customer
+              Experience</span>
+          </div>
+
+          <div class="relative flex flex-col shadow-md">
+            <img src="img/latte-art.jpg" alt="Cafe Vibe"
+              class="border-gray-200 border-l-[12px] border-r-[12px] border-t-[12px] border-b-[40px]">
+            <span
+              class="absolute bottom-0 left-0 w-full py-1.5 font-medium text-center text-yellow-700 bg-gray-200 underline">Latte Art Making</span>
+          </div>
+          
+          <div class="relative flex flex-col shadow-md">
+            <img src="img/training.jpg" alt="Cafe Vibe"
+              class="border-gray-200 border-l-[12px] border-r-[12px] border-t-[12px] border-b-[40px]">
+            <span
+              class="absolute bottom-0 left-0 w-full py-1.5 font-medium text-center text-yellow-700 bg-gray-200 underline">Staff Training</span>
+          </div>
+          
+          <div class="relative flex flex-col shadow-md">
+            <img src="img/upcoming-menu.jpg" alt="Cafe Vibe"
+              class="border-gray-200 border-l-[12px] border-r-[12px] border-t-[12px] border-b-[40px]">
+            <span
+              class="absolute bottom-0 left-0 w-full py-1.5 font-medium text-center text-yellow-700 bg-gray-200 underline text-sm">Upcoming Menu - Lotus Dessert Cup</span>
+          </div>
+          
+          <div class="relative flex flex-col shadow-md">
+            <img src="img/live-music.jpg" alt="Cafe Vibe"
+              class="border-gray-200 border-l-[12px] border-r-[12px] border-t-[12px] border-b-[40px]">
+            <span
+              class="absolute bottom-0 left-0 w-full py-1.5 font-medium text-center text-yellow-700 bg-gray-200 underline">Weekly Live Music</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="footer">
+      <footer>
+        <div class="w-full py-5 text-center text-white bg-yellow-800 md:text-left">
+          <div class="px-10">
+            <!-- <h3 class="text-4xl text-center">VISIT US</h3> -->
+            <iframe class="w-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450931!2d144.95373531531692!3d-37.81627917975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce720!2sMelbourne%2C+Victoria%2C+Australia!5e0!3m2!1sen!2s!4v1636622977773!5m2!1sen!2s"
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="grid grid-cols-1 gap-6 px-10 mt-5 md:grid-cols-3">
+            <div class="flex flex-col justify-center font-light md:justify-start">
+              <img src="img/logo-3.png" alt="logo" class="px-4 py-2 mx-auto w-35">
+              <span class="text-sm mt-14">&copy; 2025 BITE 'N BREW CAFE AND RESTO, All Rights Reserved </span>
+            </div>
+            <div class="flex flex-col font-light">
+              <h2 class="text-xl font-medium">BITE N BREW CAFE AND RESTO</h2>
+              <span class="mt-3">11920 S Texas 6 # 600, Sugar Land,Houston TX 77498, United States
+                Phone: +18325321010
+                Email: admin@bitenbrew.com</span>
+            </div>
+            <div class="flex flex-col font-light">
+              <h2 class="text-xl font-medium">OPERATIONAL HOURS</h2>
+              <span class="mt-3">Monday - Thursday: 11:00AM - 11:00PM</span>
+              <span>Friday 11:00AM - 1:00PM</span>
+              <span>Saturday 10:00AM - 1:00PM</span>
+              <span>Sunday 10:00AM - 11:00PM</span>
+            </div>
+            <div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </div>
+
+</body>
+
+</html>
