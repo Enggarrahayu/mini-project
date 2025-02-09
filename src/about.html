@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./output.css">
+  <script src="script.js" defer></script>
+  <title>Menu</title>
+</head>
+
+<body class="bg-[url('img/bg-image.svg')] bg-center bg-cover">
+  <div class="container relative min-h-screen py-1 min-w-screen">
+    <header id="navbar">
+      <nav class="fixed z-50 flex items-center justify-between w-full bg-yellow-800">
+        <!-- Logo -->
+        <img src="img/logo-3.png" alt="logo" class="px-4 py-2 cursor-pointer w-25">
+
+        <!-- Navigation Links (hidden on small screens by default) -->
+        <div class="top-0 left-0 flex items-center justify-center w-full duration-300">
+          <ul id="mobile-menu" class="flex-col items-center hidden md:flex md:flex-row gap-y-12 md:gap-8">
+            <li class="block px-5 font-medium list-none md:inline-block"><a href="index.html"
+                class="text-white no-underline">Home</a></li>
+            <li class="block px-5 font-medium list-none md:inline-block"><a href="menu.html"
+                class="text-white no-underline">Menu</a></li>
+            <li class="block px-5 font-medium list-none md:inline-block"><a href="#"
+                class="text-white no-underline">Gallery</a></li>
+            <li class="block px-5 font-medium list-none md:inline-block"><a href="#"
+                class="text-white no-underline">Bite
+                'n
+                Brew</a></li>
+            <li class="block px-5 font-medium list-none md:inline-block"><a href="#"
+                class="text-white no-underline">Contact
+                Us</a></li>
+          </ul>
+        </div>
+        <!-- Hamburger Menu Icon (for small screens) -->
+        <div class="z-50 ml-auto text-xl cursor-pointer md:hidden sm:text-3xl">
+          <button onclick="toggleMenu()" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- About Us Hero image -->
+      <!-- <section id="hero">
+        <div
+          class="flex items-center justify-center bg-[url('img/hero-image-2.png')] bg-center bg-cover min-h-[35vh] md:min-h-[75vh]">
+          <h3 class="text-soft-brown text-4xl md:text-6xl text-center font-extrabold tracking-[.10em]">ABOUT <br> <span
+              class="text-yellow-800">BITE 'N BREW</span> </h3>
+        </div>
+      </section> -->
+
+      <!--About us content-->
+      <section id="content" class="mt-20">  
+        <h3 class="text-3xl md:text-5xl text-center font-extrabold tracking-[.10em] text-gray-200">ABOUT</h3>
+        <h3 class="text-3xl md:text-5xl text-center font-extrabold tracking-[.10em] text-yellow-800 mt-2">BITE 'N BREW</h3>     
+        <div class="flex flex-col justify-center gap-8 px-12 my-8 mt-8 md:flex-row md:justify-start">          
+          <img src="img/vibe-1.jpg" alt="Cafe Vibe"
+            class="border-gray-200 border-l-[12px] border-r-[12px] border-t-[12px] border-b-[40px] w-80 mx-auto md:mx-0">
+          <div class="flex flex-col w-full gap-8 text-center text-yellow-800 md:text-justify md:justify-center">
+            <span class="text-sm font-medium">
+              Nestled in the heart of Texas, Bite 'n Brew' is more than just a café and resto; it’s a cozy retreat
+              where good food, great coffee, and warm company come together. Our journey began with a simple passion—to
+              create a place where people can enjoy delicious meals, aromatic coffee, and unforgettable moments.
+            </span>
+            <span class="text-sm font-medium">
+              At Bite 'n Brew, we believe in using only the freshest ingredients, crafting each dish and drink with
+              love.
+              Whether you’re here for a morning coffee, a hearty brunch, or a relaxing dinner, we strive to make every
+              experience special.
+            </span>
+            <span class="text-sm font-medium">
+              From our best-selling signature "Tenderloin Steak" to our handcrafted "Caramel Coffee", each item on our
+              menu is thoughtfully
+              curated to bring you flavors that delight. We’re also committed to sustainability, sourcing local
+              ingredients whenever possible and creating an environment where everyone feels at home.
+            </span>
+            <div class="grid grid-cols-3">
+              <div class="flex flex-col items-center">
+                <div class="flex items-center ">
+                  <img src="img/coffee-icon.png" alt="coffee-icon" class="w-6">
+                  <span class="text-xl font-extrabold ">50+</span>
+                </div>                
+                <span class="text-sm font-medium">ORDERS DAILY</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="flex items-center justify-between">
+                  <img src="img/coffee-icon.png" alt="coffee-icon" class="w-6">
+                  <span class="text-xl font-extrabold ">10K+</span>
+                </div>                
+                <span class="text-sm font-medium">ORDERS RUNNING</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <div class="flex items-center justify-between">
+                  <img src="img/coffee-icon.png" alt="coffee-icon" class="w-6">
+                  <span class="text-xl font-extrabold ">2K+</span>
+                </div>                
+                <span class="text-sm font-medium">HAPPY CUSTOMER</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="footer">
+      <footer>
+        <div class="w-full py-5 text-center text-white bg-yellow-800 md:text-left">
+          <div class="px-10">
+            <!-- <h3 class="text-4xl text-center">VISIT US</h3> -->
+            <iframe class="w-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450931!2d144.95373531531692!3d-37.81627917975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce720!2sMelbourne%2C+Victoria%2C+Australia!5e0!3m2!1sen!2s!4v1636622977773!5m2!1sen!2s"
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="grid grid-cols-1 gap-6 px-10 mt-5 md:grid-cols-3">
+            <div class="flex flex-col justify-center font-light md:justify-start">
+              <img src="img/logo-3.png" alt="logo" class="px-4 py-2 mx-auto w-35">
+              <span class="text-sm mt-14">&copy; 2025 BITE 'N BREW CAFE AND RESTO, All Rights Reserved </span>
+            </div>
+            <div class="flex flex-col font-light">
+              <h2 class="text-xl font-medium">BITE N BREW CAFE AND RESTO</h2>
+              <span class="mt-3">11920 S Texas 6 # 600, Sugar Land,Houston TX 77498, United States
+                Phone: +18325321010
+                Email: admin@bitenbrew.com</span>
+            </div>
+            <div class="flex flex-col font-light">
+              <h2 class="text-xl font-medium">OPERATIONAL HOURS</h2>
+              <span class="mt-3">Monday - Thursday: 11:00AM - 11:00PM</span>
+              <span>Friday 11:00AM - 1:00PM</span>
+              <span>Saturday 10:00AM - 1:00PM</span>
+              <span>Sunday 10:00AM - 11:00PM</span>
+            </div>
+            <div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </div>
+
+</body>
+
+</html>
